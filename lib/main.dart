@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:notes/constants.dart';
 import 'package:notes/views/notes_view.dart';
 
-void main() {
-  runApp(NotesApp());
+void main() async {
+  await Hive.initFlutter();
+
+  await Hive.openBox(KNotesBox);
+  runApp(const NotesApp());
 }
 
 class NotesApp extends StatelessWidget {
