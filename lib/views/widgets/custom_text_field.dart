@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onSaved: onSaved,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) {
         if (value?.isEmpty ?? true) {
           return 'Field is required';
