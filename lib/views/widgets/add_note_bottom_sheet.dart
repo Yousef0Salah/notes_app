@@ -16,7 +16,7 @@ class AddNoteBottomSheet extends StatelessWidget {
         listener: (context, state) {
           {
             if (state is AddNoteFailure) {
-              print('failied  ${state.errMessage}');
+              // print('failied  ${state.errMessage}');
             }
 
             if (state is AddNoteSuccess) {
